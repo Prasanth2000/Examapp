@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Exam Hall Finder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar showCancelButton="never" [(ngModel)]="search" (ngModelChange)="filter()"></ion-searchbar>
+  <div class="glob-container">
+    <ion-row>
+      <div>
+        <ion-col size="12" size-sm="6" size-lg="4" size-xl="4" class="ion-no-padding">
+          <ion-card *ngFor="let hall of location">
+            <img src= {{hall.image}}/>
+            <ion-card-header class="ion-no-padding ion-padding-start ion-padding-top ion-padding-end">
+              <ion-badge color="success"><b>Hall: {{hall.name}}</b></ion-badge>
+              <ion-card-subtitle><b>Location: {{hall.location}}</b></ion-card-subtitle>
+              <ion-button (click)="links(hall.map)">
+               View Map
+              </ion-button>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+
+    </ion-row>
+  </div>
+
+</ion-content>
