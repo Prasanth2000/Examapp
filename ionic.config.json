@@ -1,0 +1,7 @@
+{
+  "name": "exam-centre-finder",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
